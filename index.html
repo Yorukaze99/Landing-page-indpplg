@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schoolyard Barber</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="#home">
+          <div class="circle">
+            <img src="img/logo.png" alt="">
+          </div>
+          <div>
+            <h1>Schoolyard <span>Barber</span></h1>
+            <p>Gaya sekolah, rapi, percaya diri.</p>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+          <div class="hero-copy">
+            <span class="eyebrow">Schoolyard Barber</span>
+            <h2>
+              Melayani siswa dengan potongan rambut yang rapi, modern, dan penuh
+              percaya diri.
+            </h2>
+            <p>
+              Pelayanan grooming profesional untuk siswa dengan standar
+              kebersihan tinggi, gaya yang sesuai, dan proses nyaman bagi semua
+              usia.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Book Now</a>
+              <button
+                class="btn btn-secondary"
+                id="openServiceModal"
+                data-title="Layanan Premium"
+                data-detail="Dapatkan informasi lengkap tentang pilihan layanan terbaru kami, termasuk potong rambut, styling, dan grooming wajah. Klik untuk melihat detail lebih lanjut."
+              >
+                Lihat Layanan
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-image">
+            <img src="img/barber-man.png" alt="Barber Man" />
+          </div>
+        </div>
+
+        <div class="hero-contact">
+          <div class="contact-item">
+            <i class="fab fa-instagram"></i>
+            <span>@schoolyardbarber</span>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <span>+62 812 3456 7890</span>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-tiktok"></i>
+            <span>@schoolyardbarber</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="section-head">
+          <div>
+            <p class="section-subtitle">Layanan</p>
+            <h3>Solusi grooming yang nyaman dan modern untuk siswa</h3>
+          </div>
+        </div>
+
+        <div class="service-grid">
+          <article
+            class="service-card"
+            data-title="Potong Rambut"
+            aria-label="Potong Rambut"
+          >
+            <div class="card-icon"><i class="fas fa-cut"></i></div>
+            <h4>Potong Rambut</h4>
+            <p>
+              Potongan cepat dan rapi untuk tampilan sekolah yang disiplin namun
+              tetap stylish.
+            </p>
+            <button
+              class="card-btn"
+              data-service-detail
+              data-title="Potong Rambut"
+              data-detail="Potong rambut standar sekolah dengan teknik cepat dan rapi dari tim profesional kami."
+            >
+              Detail
+            </button>
+          </article>
+          <article
+            class="service-card"
+            data-title="Styling & Grooming"
+            aria-label="Styling & Grooming"
+          >
+            <div class="card-icon"><i class="fas fa-bolt"></i></div>
+            <h4>Styling & Grooming</h4>
+            <p>
+              Styling rambut dan grooming wajah untuk tampilan percaya diri
+              setiap hari.
+            </p>
+            <button
+              class="card-btn"
+              data-service-detail
+              data-title="Styling & Grooming"
+              data-detail="Termasuk styling rambut sesuai aturan sekolah, trimming brewok, dan pemakaian produk ringan yang aman untuk remaja."
+            >
+              Detail
+            </button>
+          </article>
+          <article
+            class="service-card"
+            data-title="Perawatan Kulit"
+            aria-label="Perawatan Kulit"
+          >
+            <div class="card-icon"><i class="fas fa-spa"></i></div>
+            <h4>Perawatan Kulit</h4>
+            <p>
+              Perawatan wajah untuk menjaga kulit tetap sehat dan bebas minyak
+              selama aktifitas sekolah.
+            </p>
+            <button
+              class="card-btn"
+              data-service-detail
+              data-title="Perawatan Kulit"
+              data-detail="Perawatan wajah dasar, pembersihan kulit, dan saran produk yang sesuai untuk usia sekolah."
+            >
+              Detail
+            </button>
+          </article>
+          <article
+            class="service-card"
+            data-title="Paket Premium"
+            aria-label="Paket Premium"
+          >
+            <div class="card-icon"><i class="fas fa-star"></i></div>
+            <h4>Paket Premium</h4>
+            <p>
+              Paket lengkap potong rambut, styling, dan konsultasi grooming
+              untuk tampilan sempurna.
+            </p>
+            <button
+              class="card-btn"
+              data-service-detail
+              data-title="Paket Premium"
+              data-detail="Paket lengkap dengan layanan potong rambut, styling, dan perawatan khusus bagi siswa yang ingin tampil optimal."
+            >
+              Detail
+            </button>
+          </article>
+        </div>
+
+        <div class="empty-state hidden" id="emptyState">
+          <p>Tidak ada layanan yang cocok. Coba kata kunci lain.</p>
+        </div>
+      </section>
+
+      <section class="section testimonials">
+        <div class="section-head center">
+          <p class="section-subtitle">Testimoni</p>
+          <h3>Apa kata siswa setelah perawatan?</h3>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <p>
+              "Potongannya cepat, rapi, dan tetap nyaman. Semua guru bilang
+              bagus!"
+            </p>
+            <h4>Rangga</h4>
+            <span>Siswa SMK</span>
+          </article>
+          <article class="testimonial-card">
+            <p>
+              "Layanannya bersih, staf ramah, dan hasilnya bikin percaya diri ke
+              sekolah."
+            </p>
+            <h4>Intan</h4>
+            <span>Siswi SMA</span>
+          </article>
+          <article class="testimonial-card">
+            <p>
+              "Tempatnya nyaman, dan fasilitasnya cocok untuk siswa yang butuh
+              potong cepat."
+            </p>
+            <h4>Dewa</h4>
+            <span>Siswa SMP</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq">
+        <div class="section-head">
+          <div>
+            <p class="section-subtitle">FAQ</p>
+            <h3>Pertanyaan umum tentang layanan kami</h3>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <button aria-expanded="false">
+            Apa saja protokol kesehatan di salon?
+            <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="panel">
+            <p>
+              Kami membersihkan area kerja setiap pergantian pelanggan,
+              menggunakan masker, dan menjaga kebersihan peralatan.
+            </p>
+          </div>
+
+          <button aria-expanded="false">
+            Bagaimana cara booking layanan?
+            <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="panel">
+            <p>
+              Isi formulir kontak, atau hubungi WA resmi kami. Kami akan
+              mengonfirmasi jadwal dan layanan yang Anda pilih.
+            </p>
+          </div>
+
+          <button aria-expanded="false">
+            Apakah ada paket hemat untuk siswa?
+            <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="panel">
+            <p>
+              Ada! Tanyakan paket khusus sekolah saat menghubungi kami untuk
+              pilihan harga terbaik.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="section-head">
+          <div>
+            <p class="section-subtitle">Kontak</p>
+            <h3>Hubungi kami untuk jadwal dan konsultasi gratis</h3>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div>
+              <h4>Alamat</h4>
+              <p>Jl. Sekolah No. 12, Kota, Indonesia</p>
+            </div>
+            <div>
+              <h4>Telepon</h4>
+              <p>+62 812 3456 7890</p>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p>info@schoolyardbarber.id</p>
+            </div>
+            <div>
+              <h4>Jam Operasional</h4>
+              <p>Senin - Sabtu, 08:00 - 17:00</p>
+            </div>
+          </div>
+
+          <form id="contactForm" class="contact-form" novalidate>
+            <label>
+              Nama Lengkap
+              <input
+                type="text"
+                name="name"
+                placeholder="Masukkan nama Anda"
+                required
+              />
+            </label>
+            <label>
+              Email
+              <input
+                type="email"
+                name="email"
+                placeholder="contoh@mail.com"
+                required
+              />
+            </label>
+            <label>
+              Pesan
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Tulis pesan Anda"
+                required
+              ></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <h4>Schoolyard Barber</h4>
+          <p>
+            Layanan barber profesional untuk siswa dengan standar kebersihan dan
+            gaya modern.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#services">Service</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-contacts">
+          <a href="https://www.instagram.com" target="_blank" rel="noreferrer"
+            ><i class="fab fa-instagram"></i> Instagram</a
+          >
+          <a href="https://wa.me/6281234567890" target="_blank" rel="noreferrer"
+            ><i class="fab fa-whatsapp"></i> WhatsApp</a
+          >
+        </div>
+      </div>
+      <p class="footer-note">© 2026 Schoolyard Barber. All rights reserved.</p>
+    </footer>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="modal hidden" id="detailModal" aria-hidden="true">
+      <div
+        class="modal-inner"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <button
+          class="icon-btn modal-close"
+          id="modalClose"
+          aria-label="Close modal"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <h3 id="modalTitle">Detail Layanan</h3>
+        <p id="modalDescription">
+          Informasi detail layanan akan muncul di sini.
+        </p>
+        <button class="btn btn-secondary" id="modalDismiss">Tutup</button>
+      </div>
+    </div>
+
+    <script defer src="script.js"></script>
+  </body>
+</html>
